@@ -132,7 +132,6 @@ function RoomModal({data,statuses,quantities,notes,updateStatus,updateQty,update
   const tm=TYPE_META[data.type]||{};
   const roomStatuses=statuses[data.room]||{};
   const roomQtys=quantities[data.room]||{};
-  const roomNote=notes[data.room]||"";
 
   const totalQty=Object.values(roomQtys).reduce((a,b)=>a+b,0);
   const issues=Object.entries(roomStatuses).filter(([,v])=>v!=="Working");
